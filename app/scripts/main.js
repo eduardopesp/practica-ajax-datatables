@@ -1,8 +1,5 @@
 'use strict';
 
-$.validator.addMethod("lettersonly", function(value, element) {
-    return this.optional(element) || /^[a-z]+$/i.test(value);
-}, "Solo letras por favor");
 
 var idDoctor;
 $(document).ready(function() {
@@ -314,4 +311,10 @@ $(document).ready(function() {
             complete: {}
         });
     }
+
+    $.validator.addMethod("lettersonly", function(value, element) {
+        return this.optional(element) || /^[a-z\s]+$/i.test(value);
+    }, "Solo se permiten letras");
+
+
 });

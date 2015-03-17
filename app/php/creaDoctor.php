@@ -29,25 +29,14 @@ mysql_query('SET names utf8');
 
 
 
-/*
- * SQL queries
- * Get data to display
- */
-
 $nombre = $_POST["nombreNuevo"];
 $numcolegiado = $_POST["numcolegiadoNuevo"];
 $clinicas = $_POST["clinicas2"];
-
-
-//echo "id=$id nombre= $nombre colegiado= $numcolegiado clinicas= $clinicas";
-
-//echo"$query <br>";
-
-$query1 = "insert into doctores (nombre,numcolegiado) values( 
-             '". $nombre . "', 
+$query1 = "insert into doctores (nombre,numcolegiado) values(
+             '". $nombre . "',
             '" . $numcolegiado . "')" ;
 
-//echo"$query1 <br>";
+
 
 $query_res1 = mysql_query($query1);
 
@@ -58,7 +47,6 @@ $sql = "SELECT id_doctor
         FROM doctores
         where numcolegiado='".$numcolegiado."'";
 
-//echo "$sql <br>";
 $res = mysql_query($sql);
 
 
@@ -67,31 +55,23 @@ while($row = mysql_fetch_array($res, MYSQL_ASSOC))
 $id_nuevo=$row['id_doctor'];
 }
 }
-//echo "idenuevo =>  $id_nuevo";
-for ($i=0;$i<count($clinicas);$i++)    
-{     
-//echo "<br> CLinicaid " . $i . ": " . $clinicas[$i];   
+for ($i=0;$i<count($clinicas);$i++)
+{
 
-$query2 = "insert into clinica_doctor (id_doctor,id_clinica) values( 
-             ". $id_nuevo . ", 
+$query2 = "insert into clinica_doctor (id_doctor,id_clinica) values(
+             ". $id_nuevo . ",
             " . $clinicas[$i] . ")" ;
-
-
-//echo"$query1";
-
 
 
             $query_res2 = mysql_query($query2);
 
 
-} 
+}
 
 
 
 
 if (!$query_res1||!$res||$query_res2) {
-   // $mensaje  = 'Error en la consulta de inserts: ' . mysql_error() . "\n";
-   // $estado = mysql_errno();
 
 
     if (mysql_errno() == 1062) {
