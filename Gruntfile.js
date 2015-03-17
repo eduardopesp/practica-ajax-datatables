@@ -1,4 +1,4 @@
-// Generated on 2015-03-07 using
+// Generated on 2015-02-17 using
 // generator-webapp 0.5.1
 'use strict';
 
@@ -19,7 +19,7 @@ module.exports = function (grunt) {
   // Configurable paths
   var config = {
     app: 'app',
-    dist: 'dist'
+    dist: '/var/www/html/dist-datatables'
   };
 
   // Define the configuration for all the tasks
@@ -290,11 +290,12 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             'images/{,*/}*.webp',
             '{,*/}*.html',
-            'styles/fonts/{,*/}*.*'
+            'styles/fonts/{,*/}*.*',
+            'php/*.*'
           ]
         }, {
           src: 'node_modules/apache-server-configs/dist/.htaccess',
-          dest: '<%= config.dist %>/.htaccess'
+          dest: '<%= config.dist %>/htaccess'
         }, {
           expand: true,
           dot: true,
