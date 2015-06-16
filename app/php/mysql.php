@@ -1,6 +1,6 @@
 <?php
-$gaSql['user'] = "fjaranda_1";
-$gaSql['password'] = "datatables";
-$gaSql['db'] = "fjaranda_datatables";
-$gaSql['server'] = "localhost";
+$gaSql['user'] = "eduardoperez_edu";
+$gaSql['password'] = "123456";
+$gaSql['db'] = "eduardoperez_data";
+$gaSql['server'] = "www.infenlaces.com";
 ?>

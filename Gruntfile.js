@@ -19,7 +19,7 @@ module.exports = function (grunt) {
   // Configurable paths
   var config = {
     app: 'app',
-    dist: '/var/www/html/dist-datatables'
+    dist: '/var/www/p-ajax-datatables'
   };
 
   // Define the configuration for all the tasks

@@ -11,6 +11,8 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/datatables/media/css/jquery.dataTables.css" />
+    <link rel="stylesheet" href="bower_components/growl/stylesheets/jquery.growl.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -21,17 +23,14 @@
 
 <body>
     <div class="container-fluid">
-
         <div id="tabla" class="row">
             <div class="col-md-12">
                 <div id="edicionok" class="alert alert-success" role="alert">Edicion correta!</div>
                 <div id="edicionerr" class="alert alert-danger" role="alert">Edicion erronea!</div>
-
-                <a href="https://github.com/arangonz/practica-ajax-datatables" target="blank">
+                <a href="https://github.com/eduardopesp/practica-ajax-datatables" target="blank">
                     <button id="github" type="button" class="btn btn-info navbar-btn">Repositorio Github</button>
                 </a>
                 <button id="creaDoc" type="button" class="btn btn-success navbar-btn">Nuevo Doctor</button>
-
                 <table id="miTabla" class="table stripe">
                     <thead>
                         <th>Nombre Doctor</th>
@@ -39,14 +38,12 @@
                         <th>Nombre Clinica</th>
                         <th>Id Clinica</th>
                         <th>Edicion Y Borrado</th>
-
                     </thead>
                     <tbody>
                     </tbody>
                 </table>
             </div>
         </div>
-
         <!--EDITAR-->
         <div id="formulario" class="row">
             <div class="col-md-4 col-md-offset-3">
@@ -54,7 +51,7 @@
                     <div>
                         <h2>Editar Doctor</h2>
                         <div class="form-group">
-                                <input disabled="true" type="hidden" class="form-control" id="idDoctor">
+                            <input disabled="true" type="hidden" class="form-control" id="idDoctor">
                         </div>
                         <div class="form-group">
                             <label for="nombre" class="col-sm-2 control-label">Nombre:*</label>
@@ -72,31 +69,25 @@
                             <label for="clinicas" class="col-sm-2 control-label">Clínicas*:</label>
                             <div class="col-sm-10">
                                 <select multiple id="clinicas" name="clinicas">
-
                                 </select>
                             </div>
                         </div>
-
                         <div class="form-group">
                             <div class="col-sm-10 col-sm-offset-2">
                                 <button id="enviar" type="submit" class="btn btn-primary">Enviar</button>
                                 <a class="btn btn-danger" href="index.html" role="button">Cancelar</a>
                             </div>
                         </div>
-
                     </div>
                 </form>
-
             </div>
         </div>
         <!--FIN EDITAR-->
-
         <!--BORRAR-->
         <div class="modal fade" id="basicModal" name="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-
                         <h4 class="modal-title" id="myModalLabel">Borrar Doctor</h4>
                     </div>
                     <div class="modal-body">
@@ -106,12 +97,10 @@
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
                         <button type="button" type="submit" id="confBorrar" name="confBorrar" data-dismiss="modal" class="btn btn-primary aceptarBorrado">Si</button>
                     </div>
-
                 </div>
             </div>
         </div>
         <!--FIN BORRAR-->
-
         <!--NUEVO DOCTOR-->
         <div id="formularioCrear" class="row">
             <div class="col-md-4 col-md-offset-3">
@@ -119,7 +108,6 @@
                 <form class="form-horizontal" id="formCrear" name="formCrear" method="post" action="#">
                     <div>
                         <h2>Nuevo Doctor</h2>
-
                         <div class="form-group">
                             <label for="nombreNuevo" class="col-sm-2 control-label">Nombre:*</label>
                             <div class="col-sm-4">
@@ -136,52 +124,38 @@
                             <label for="clinicas2" class="col-sm-2 control-label">Clínicas*:</label>
                             <div class="col-sm-10">
                                 <select multiple id="clinicas2" name="clinicas2">
-
                                 </select>
                             </div>
                         </div>
-
                         <div class="form-group">
                             <div class="col-sm-10 col-sm-offset-2">
                                 <button id="enviarDoc" type="submit" class="btn btn-primary">Enviar</button>
-
                                 <a class="btn btn-danger" href="index.html" role="button">Cancelar</a>
                             </div>
                         </div>
-
                     </div>
                 </form>
-
             </div>
         </div>
         <!--FIN NUEVO DOCTOR-->
     </div>
-
-
-
-
-
-
-
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap.growl/bootstrap-growl.js"></script>
     <script src="bower_components/jquery-validate/dist/jquery.validate.js"></script>
+    <script src="bower_components/jquery.validate/dist/jquery.validate.js"></script>
+    <script src="bower_components/datatables/media/js/jquery.dataTables.js"></script>
+    <script src="bower_components/growl/javascripts/jquery.growl.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
     <!-- build:js({app,.tmp}) scripts/main.js -->
     <script src="scripts/jquery.dataTables.js"></script>
     <script src="scripts/dataTables.bootstrap.js"></script>
     <script src="scripts/modal.js"></script>
     <script src="scripts/messages_es.js"></script>
-
-
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
-
-
 </body>
 
 </html>

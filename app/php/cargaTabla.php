@@ -21,10 +21,10 @@ $columns = array(
 
 // SQL server connection information
 $sql_details = array(
-    'user' => 'fjaranda_1',
-    'pass' => 'datatables',
-    'db'   => 'fjaranda_datatables',
-    'host' => 'localhost'
+    'user' => 'eduardoperez_edu',
+    'pass' => '123456',
+    'db'   => 'eduardoperez_data',
+    'host' => 'www.infenlaces.com'
 );
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *

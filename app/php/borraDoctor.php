@@ -38,7 +38,7 @@ if (isset($_REQUEST['id_doctor'])) {
  * SQL queries
  * Get data to display
  */
-$query = "delete from doctores where id_doctor=" . $id_doctor;
+$query = "delete on cascade from doctores where id_doctor=" . $id_doctor;
 $query_res = mysql_query($query);
 
 
